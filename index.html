@@ -9,7 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -23,7 +25,7 @@
                   Anikait Singh
                 </p>
                 <p>
-                  I'm a second year Ph.D Student at Stanford AI advised by <a href="https://ai.stanford.edu/~cbfinn/">Chelsea Finn</a>. I closely collaborate with <a href="https://aviralkumar2907.github.io/">Aviral Kumar</a>, <a href="https://thashim.github.io/">Tatsu Hashimoto</a>, and <a href="https://cs.stanford.edu/~ermon/">Stefano Ermon</a>. Previously, I was at UC Berkeley advised by <a href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a> as part of BAIR working on Deep RL and Robot Learning. I was also a student researcher at Google DeepMind Robotics, and Toyota Research Institute. My research is supported by the NSF Graduate Research Fellowship.
+                  I'm a second year Ph.D Student at Stanford AI advised by <a href="https://ai.stanford.edu/~cbfinn/">Chelsea Finn</a>. I closely collaborate with <a href="https://aviralkumar2907.github.io/">Aviral Kumar</a> and <a href="https://thashim.github.io/">Tatsu Hashimoto</a>. Previously, I was at UC Berkeley advised by <a href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a> as part of BAIR working on Deep RL and Robot Learning. I was also a student researcher at Google DeepMind Robotics, and Toyota Research Institute. My research is supported by the NSF Graduate Research Fellowship.
                 </p>
                 <p style="text-align:center">
                   <a href="mailto:anikait@stanford.edu">Email</a> &nbsp;/&nbsp;
@@ -50,6 +52,71 @@
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src="./static/images/FSPO.jpg" alt="understanding_rlhf" width="240" style="border-style: none">
+              </td>
+              <td width="75%" valign="middle">
+                <a href="https://arxiv.org/pdf/2502.19312.pdf" id="understanding_rlhf_arxiv">
+                  <span class="papertitle">FSPO: Few-Shot Preference Optimization of Synthetic Preference Data in LLMs Elicits Effective Personalization to Real Users</span>
+                </a>
+                <br>
+                <strong>Anikait Singh*</strong>, Sheryl Hsu*, Kyle Hsu, Eric Mitchell, Stefano Ermon, Tatsunori Hashimoto, Archit Sharma, Chelsea Finn
+                <br>
+                <em>ACL</em>, 2025
+                <br>
+                <a href="https://fewshot-preference-optimization.github.io/">project page</a> /
+                <a href="https://arxiv.org/pdf/2502.19312.pdf">paper</a> /
+                <a href="https://github.com/Asap7772/fewshot-preference-optimization">code</a>
+                <p></p>
+                <p>As language models increasingly interact with a diverse user base, it becomes important for models to generate responses that align with individual user preferences. Few-Shot Preference Optimization (FSPO) is a meta-learning framework that leverages the strong in-context learning capabilities of an LLM to capture the diversity of human preferences. We additionally study crucial design decision to allow for effective transfer from synthetic to real users through synthetic preference data.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src="./static/images/cog_behav.png" alt="understanding_rlhf" width="240" style="border-style: none">
+              </td>
+              <td width="75%" valign="middle">
+                <a href="https://arxiv.org/pdf/2501.04682.pdf" id="understanding_rlhf_arxiv">
+                  <span class="papertitle">Cognitive Behaviors that Enable Self-Improving Reasoners, or, Four Habits of Highly Effective STaRs
+                  </span>
+                </a>
+                <br>
+                Kanishk Gandhi, Ayush Chakravarthy, <strong>Anikait Singh</strong>, Nathan Lile, Noah D. Goodman
+                <br>
+                <a href="https://arxiv.org/pdf/2501.04682.pdf">paper</a> /
+                <a href="https://github.com/kanishkg/cognitive-behaviors">code</a> 
+                <p></p>
+                <p>This study demonstrates that a language model's intrinsic reasoning behaviors—such as verification, backtracking, subgoal setting, and backward chaining—are key to its ability to self-improve under reinforcement learning, as evidenced by Qwen naturally exhibiting these traits while Llama initially does not. By priming Llama with examples of proper reasoning patterns—even with incorrect answers—and further pretraining with targeted reasoning data, the model's performance substantially improves to match or exceed that of Qwen, underscoring the fundamental link between initial reasoning behaviors and effective model enhancement.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <img src="./static/images/metacot.png" alt="understanding_rlhf" width="240" style="border-style: none">
+              </td>
+              <td width="75%" valign="middle">
+                <a href="https://arxiv.org/pdf/2501.04682.pdf" id="understanding_rlhf_arxiv">
+                  <span class="papertitle">Towards System 2 Reasoning in LLMs: Learning How to Think With Meta Chain-of-Thought
+                  </span>
+                </a>
+                <br>
+                Violet Xiang, Charlie Snell, Kanishk Gandhi, Alon Albalak, <strong>Anikait Singh</strong>, Chase Blagden, Duy Phung, Rafael Rafailov, Nathan Lile, Dakota Mahan, Louis Castricato, Jan-Philipp Franken, Nick Haber, Chelsea Finn
+                <br>
+                <a href="https://arxiv.org/pdf/2501.04682.pdf">paper</a> /
+                <a href="https://www.synthlabs.ai/research/meta-chain-of-thought">blog</a> 
+                <p></p>
+                <p>We propose a novel framework, Meta Chain-of-Thought (Meta-CoT), which extends traditional Chain-of-Thought (CoT) by explicitly modeling the underlying reasoning required to arrive at a particular CoT. We
+                  present empirical evidence from state-of-the-art models exhibiting behaviors consistent with in-context search,
+                  and explore methods for producing Meta-CoT via process supervision, synthetic data generation, and search
+                  algorithms.
+                </p>
+              </td>
+            </tr>
             
             <tr>
               <td style="padding:20px;width:25%;vertical-align:middle">
