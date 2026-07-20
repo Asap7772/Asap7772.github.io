@@ -2,24 +2,22 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+  <meta charset="UTF-8">
   <title>Anikait Singh</title>
-
   <meta name="author" content="Anikait Singh">
+  <meta name="description"
+    content="Anikait Singh is a Ph.D. student at Stanford AI building algorithms for self-improving and creative foundation models.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
     (function () {
       var storedTheme = localStorage.getItem('theme');
-      var theme = storedTheme || 'light';
-      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute('data-theme', storedTheme || 'light');
     })();
   </script>
-  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
 <body>
@@ -31,710 +29,350 @@
       </svg>
     </span>
   </button>
-  <main class="page-shell">
-    <section class="hero-panel">
-      <div class="hero-copy">
-        <!-- <p class="hero-kicker">Stanford AI · Reinforcement Learning · Foundation Models</p> -->
-        <h1 class="name">
-          Anikait Singh
-        </h1>
-        <p class="hero-summary">
-          I'm a third year Ph.D student at Stanford AI advised by <a href="https://ai.stanford.edu/~cbfinn/">Chelsea
-            Finn</a> and <a href="https://aviralkumar2907.github.io/">Aviral Kumar</a>. Previously, I was at UC
-          Berkeley advised by <a href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a>. I was a
-          research scientist intern at Microsoft Research NYC, Google DeepMind Robotics, and Toyota Research Institute.
-          My research is supported by the NSF Graduate Research Fellowship.
-        </p>
-        <div class="social-links" aria-label="Profile links">
+
+  <main>
+    <header class="intro">
+      <div class="intro-text">
+        <h1>Anikait Singh</h1>
+        <p class="role">Ph.D. student, Stanford AI</p>
+        <nav class="links" aria-label="Profile links">
           <a href="mailto:anikait@stanford.edu">Email</a>
           <a href="./static/pdf/resume.pdf">CV</a>
           <a href="https://scholar.google.com/citations?user=lPaISmIAAAAJ&amp;hl=en">Scholar</a>
           <a href="https://twitter.com/Anikait_Singh_">Twitter</a>
           <a href="https://github.com/asap7772/">GitHub</a>
-          <a href="https://www.admonymous.co/asap7772">Anonymous Feedback</a>
-        </div>
+          <a href="https://www.admonymous.co/asap7772">Feedback</a>
+        </nav>
       </div>
-      <aside class="hero-portrait">
-        <a href="./static/images/profile.png"><img alt="profile photo" src="./static/images/profile.png" decoding="async" fetchpriority="high"
-            class="profile-photo hoverZoomLink"></a>
-      </aside>
-    </section>
+      <a class="intro-photo" href="./static/images/profile.jpg">
+        <img src="./static/images/profile.jpg" alt="Anikait Singh" decoding="async" fetchpriority="high">
+      </a>
+    </header>
 
-    <section class="card section-block" id="overview">
-      <div class="section-heading">
-        <p class="section-label">Overview</p>
-      </div>
-      <p class="section-intro">
-        My research develops algorithms for self-improving and creative foundation models, with the long-term goal of enabling progress on difficult, open-ended problems such as scientific research. These problems require more than imitating demonstrations or solving well-specified tasks: models must decide what is worth trying, synthesize partial evidence, discover useful abstractions, and refine ideas whose value is revealed only through downstream validation. I study how feedback from a model’s own attempts, natural-language critiques, and inference-time computation that can be transformed into learning signals to drive exploration and improvement. The aim is to build models that can generate, evaluate, and refine novel insights, learning problem-solving strategies that generalize across domains.
+    <section class="bio">
+      <p>
+        I am a final-year Ph.D. student at Stanford University, advised by
+        <a href="https://ai.stanford.edu/~cbfinn/">Chelsea Finn</a> and
+        <a href="https://aviralkumar2907.github.io/">Aviral Kumar</a>, and a Research Scientist Intern at Meta MSL.
+        Prior to Stanford, I was at UC Berkeley, where I was advised by
+        <a href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a>, and I have held internships at
+        Microsoft Research NYC, Google DeepMind Robotics, and Toyota Research Institute. My research is supported by the
+        NSF Graduate Research Fellowship.
+      </p>
+      <p>
+        My research develops algorithms for self-improving and creative foundation models, with the
+        long-term goal of enabling progress on difficult, open-ended problems such as scientific research. These
+        problems require more than imitating demonstrations or solving well-specified tasks: models must decide what is
+        worth trying, synthesize partial evidence, discover useful abstractions, and refine ideas whose value is
+        revealed only through downstream validation. I study how feedback from a model's own attempts, natural-language
+        critiques, and inference-time computation can be transformed into learning signals that drive exploration and
+        improvement. The aim is to build models that can generate, evaluate, and refine novel insights, learning
+        problem-solving strategies that generalize across domains.
       </p>
     </section>
 
-    <section class="card section-block" id="research">
-      <div class="section-heading">
-        <p class="section-label">Research</p>
-      </div>
-      <div class="papers-grid">
-        <div class="paper-card">
-          <div class="paper-image">
-            <img src="./static/images/abstractions.png" alt="understanding_rlhf" width="400" loading="lazy" decoding="async"
-              style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://arxiv.org/abs/2510.02263">
-              <span class="papertitle">Training LLMs to Discover Abstractions for Solving Reasoning
-                Problems</span>
-            </a>
-            <div class="paper-meta">
-              Yuxiao Qu*, <strong>Anikait Singh*</strong>, Yoonho Lee*, Amrith Setlur, Ruslan
-              Salakhutdinov, Chelsea Finn, Aviral Kumar
-              <br>
-              <em>International Conference on Learning Representations (ICLR) 2026</em> <br>
-              <em>Spotlight at ES-FoMo Workshop, ICML 2025</em>
-            </div>
-            <div class="paper-links">
-              <a href="https://arxiv.org/abs/2510.02263">paper</a> /
-              <a href="https://cohenqu.github.io/rlad.github.io/">website</a> /
-              <a href="https://huggingface.co/datasets/CMU-AIRe/RLAD-abstractions-benchmarks">dataset</a>
-            </div>
-            <p>This paper presents RL for Abstraction Discovery (RLAD), a multi-agent RL method for LLMs
-              to discovers novel "reasoning abstractions" to guide problem solving. This approach can
-              improve the diversity of reasoning strategies explored and steer solution-generators towards
-              useful parts of the solution space for harder problem settings where exploration is
-              required.</p>
-          </div>
-        </div>
+    <section class="publications">
+      <h2>Publications</h2>
 
-        <div class="paper-card">
-          <div class="paper-image">
-            <img src="./static/images/giants.png" alt="giants" width="400" loading="lazy" decoding="async" style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://giants-insights.github.io/"
-              >
-              <span class="papertitle">GIANTS: Generative Insight Anticipation
-                from Scientific Literature</span>
-            </a>
-            <div class="paper-meta">
-              Joy He-Yueya*, <strong>Anikait Singh*</strong>, Ge Gao, Michael Y. Li, Sherry Yang,
-              Chelsea Finn, Emma Brunskill, Noah D. Goodman
-              <br>
-              <em>Under submission to Conference on Language Modeling (CoLM) 2026</em> <br>
-            </div>
-            <div class="paper-links">
-              <a href="https://giants-insights.github.io/static/pdfs/giants.pdf">paper</a> /
-              <a href="https://giants-insights.github.io/">website</a> /
-              <a href="https://huggingface.co/giants2026">benchmark &amp; model</a>
-            </div>
-            <p>This paper presents GIANTS-4B, an LM trained via reinforcement learning (RL) to optimize
-              insight anticipation by predicting a downstream paper's core contribution from summaries of
-              its foundational parent papers. This approach significantly outperforms frontier models at
-              generating feasible, high-quality scientific insights and successfully zero-shot generalizes
-              its synthesis capabilities across diverse, unseen scientific disciplines.</p>
-          </div>
-        </div>
+      <h3 class="pub-group">Reasoning and Inference Time Computation</h3>
 
-        <div class="paper-card">
-          <div class="paper-image">
-            <img src="./static/images/FSPO.jpg" alt="understanding_rlhf" width="400" loading="lazy" decoding="async"
-              style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://arxiv.org/pdf/2502.19312.pdf">
-              <span class="papertitle">Few-Shot Preference Optimization of Synthetic Preferences Elicits
-                Effective Personalization to Real Users</span>
-            </a>
-            <div class="paper-meta">
-              <strong>Anikait Singh*</strong>, Sheryl Hsu*, Kyle Hsu, Eric Mitchell, Tatsu Hashimoto,
-              Archit Sharma, Chelsea Finn
-              <br>
-              <em>International Conference on Learning Representations (ICLR) 2026</em> <br>
-              <!-- <em>DataWorld Workshop, ICML 2025</em> -->
-            </div>
-            <div class="paper-links">
-              <a href="https://fewshot-preference-optimization.github.io/">project page</a> /
-              <a href="https://arxiv.org/pdf/2502.19312.pdf">paper</a> /
-              <a href="https://github.com/Asap7772/fewshot-preference-optimization">code</a>
-            </div>
-            <p>As language models increasingly interact with a diverse user base, it becomes important for
-              models to generate responses that align with individual user preferences. Few-Shot
-              Preference Optimization (FSPO) is a meta-learning framework that leverages the strong
-              in-context learning capabilities of an LLM to capture the diversity of human preferences.
-            </p>
-          </div>
+      <article class="pub pub-featured">
+        <a class="pub-thumb" href="https://arxiv.org/abs/2510.02263">
+          <img src="./static/images/abstractions.png" alt="RLAD reasoning abstractions" loading="eager" decoding="async">
+        </a>
+        <div class="pub-body">
+          <a class="pub-title" href="https://arxiv.org/abs/2510.02263">Training LLMs to Discover Abstractions for
+            Solving Reasoning Problems</a>
+          <p class="pub-meta">Yuxiao Qu*, <strong>Anikait Singh*</strong>, Yoonho Lee*, Amrith Setlur, Ruslan
+            Salakhutdinov, Chelsea Finn, Aviral Kumar</p>
+          <p class="pub-venue">ICLR 2026 &middot; Spotlight, ES-FoMo Workshop @ ICML 2025</p>
+          <p class="pub-takeaway">A multi-agent RL method (RLAD) that trains LLMs to discover reusable reasoning
+            abstractions, steering exploration toward useful strategies on hard problems.</p>
+          <p class="pub-links">
+            <a href="https://arxiv.org/abs/2510.02263">paper</a> &middot;
+            <a href="https://cohenqu.github.io/rlad.github.io/">website</a> &middot;
+            <a href="https://huggingface.co/datasets/CMU-AIRe/RLAD-abstractions-benchmarks">dataset</a>
+          </p>
         </div>
+      </article>
 
-        <div class="paper-card">
-          <div class="paper-image">
-            <img src="./static/images/cog_behav.png" alt="understanding_rlhf" width="400" loading="lazy" decoding="async"
-              style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://arxiv.org/pdf/2503.01307.pdf">
-              <span class="papertitle">Cognitive Behaviors that Enable Self-Improving Reasoners, or, Four
-                Habits of Highly Effective STaRs</span>
-            </a>
-            <div class="paper-meta">
-              Kanishk Gandhi, Ayush Chakravarthy, <strong>Anikait Singh</strong>, Nathan Lile, Noah D.
-              Goodman
-              <br>
-              <em>CoLM</em>, 2025, <strong>(Oral Presentation)</strong>
-            </div>
-            <div class="paper-links">
-              <a href="https://arxiv.org/pdf/2503.01307.pdf">paper</a> /
-              <a href="https://github.com/kanishkg/cognitive-behaviors">code</a>
-            </div>
-            <p>This study demonstrates that a language model's intrinsic reasoning behaviors—such as
-              verification, backtracking, subgoal setting, and backward chaining—are key to its ability to
-              self-improve under reinforcement learning.</p>
-          </div>
+      <article class="pub pub-featured">
+        <a class="pub-thumb" href="https://giants-insights.github.io/">
+          <img src="./static/images/giants.png" alt="GIANTS scientific insight anticipation" loading="eager"
+            decoding="async">
+        </a>
+        <div class="pub-body">
+          <a class="pub-title" href="https://giants-insights.github.io/">GIANTS: Generative Insight Anticipation from
+            Scientific Literature</a>
+          <p class="pub-meta">Joy He-Yueya*, <strong>Anikait Singh*</strong>, Ge Gao, Michael Y. Li, Sherry Yang,
+            Chelsea Finn, Emma Brunskill, Noah D. Goodman</p>
+          <p class="pub-venue">Under submission, CoLM 2026</p>
+          <p class="pub-takeaway">An LM trained with RL to anticipate a paper's core insight from its foundational
+            references, generalizing to unseen scientific disciplines.</p>
+          <p class="pub-links">
+            <a href="https://giants-insights.github.io/static/pdfs/giants.pdf">paper</a> &middot;
+            <a href="https://giants-insights.github.io/">website</a> &middot;
+            <a href="https://huggingface.co/giants2026">benchmark &amp; model</a>
+          </p>
         </div>
+      </article>
 
-        <div class="paper-card">
-          <div class="paper-image">
-            <img src="./static/images/mlesmith.png" alt="understanding_rlhf" width="400" loading="lazy" decoding="async"
-              style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://arxiv.org/abs/2510.02263">
-              <span class="papertitle">MLE-Smith: Scaling MLE Tasks with Automated Multi-Agent
-                Pipeline</span>
-            </a>
-            <div class="paper-meta">
-              Rushi Qiang, Yuchen Zhuang, <strong>Anikait Singh</strong>, Percy Liang, Chao Zhang, Sherry
-              Yang, Bo Dai
-              <br>
-              <em>International Conference on Learning Representations (ICLR) 2026</em>
-            </div>
-            <div class="paper-links">
-              <a href="https://arxiv.org/abs/2510.02263">paper</a> /
-              <a href="https://huggingface.co/papers/2510.07307">code</a>
-            </div>
-            <p>This paper introduces MLE-Smith, a fully automated multi-agent generate–verify–execute
-              pipeline that converts raw datasets into competition-style MLE tasks by combining structured
-              task generation (Brainstormer/Designer/Refactor), hybrid verification (deterministic checks
-              + agent review), and execution-based validation to ensure structural integrity, semantic
-              soundness, and empirical solvability at scale.
-            <p>
-          </div>
+      <article class="pub pub-featured">
+        <a class="pub-thumb" href="https://openreview.net/pdf?id=ZXRKOAf7UX">
+          <img src="./static/images/backtrack.png" alt="Test-time search with backtracking" loading="eager"
+            decoding="async">
+        </a>
+        <div class="pub-body">
+          <a class="pub-title" href="https://openreview.net/pdf?id=ZXRKOAf7UX">Improving Test-Time Search in LLMs with
+            Backtracking Against In-Context Value Verifiers</a>
+          <p class="pub-meta"><strong>Anikait Singh</strong>, Kushal Arora, Sedrick Keh, Jean Mercat, Tatsunori
+            Hashimoto, Chelsea Finn, Aviral Kumar</p>
+          <p class="pub-venue">ICLR 2025 Workshop on Reasoning and Planning for LLMs &middot; Runner-Up Best Paper</p>
+          <p class="pub-takeaway">Pairs process verifiers with preemptive backtracking to resample only problematic
+            steps, cutting test-time compute.</p>
+          <p class="pub-links">
+            <a href="https://openreview.net/pdf?id=ZXRKOAf7UX">paper</a>
+          </p>
         </div>
+      </article>
 
-        <div class="paper-card">
-          <div class="paper-image">
-            <img src="./static/images/backtrack.png" alt="understanding_rlhf" width="400" loading="lazy" decoding="async"
-              style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://openreview.net/pdf?id=ZXRKOAf7UX">
-              <span class="papertitle">Improving Test-Time Search in LLMs with Backtracking Against
-                In-Context Value Verifiers</span>
-            </a>
-            <div class="paper-meta">
-              <strong>Anikait Singh</strong>, Kushal Arora, Sedrick Keh, Jean Mercat, Tatsunori Hashimoto,
-              Chelsea Finn, Aviral Kumar
-              <br>
-              <em>ICLR</em>, 2025, Workshop on Reasoning and Planning for LLMs (<strong>Runner-Up Best
-                Paper</strong>)
-            </div>
-            <div class="paper-links">
-              <a href="https://openreview.net/pdf?id=ZXRKOAf7UX">paper</a>
-            </div>
-            <p>This paper introduces a novel approach combining process verifiers with preemptive
-              backtracking to efficiently identify and resample problematic steps, significantly reducing
-              computation through focused revisions and in-context process supervision.</p>
-          </div>
+      <article class="pub pub-featured">
+        <a class="pub-thumb" href="https://arxiv.org/pdf/2503.01307.pdf">
+          <img src="./static/images/cog_behav.png" alt="Cognitive behaviors for self-improving reasoners"
+            loading="eager" decoding="async">
+        </a>
+        <div class="pub-body">
+          <a class="pub-title" href="https://arxiv.org/pdf/2503.01307.pdf">Cognitive Behaviors that Enable
+            Self-Improving Reasoners, or, Four Habits of Highly Effective STaRs</a>
+          <p class="pub-meta">Kanishk Gandhi, Ayush Chakravarthy, <strong>Anikait Singh</strong>, Nathan Lile, Noah D.
+            Goodman</p>
+          <p class="pub-venue">CoLM 2025 (Oral)</p>
+          <p class="pub-takeaway">Shows that intrinsic reasoning behaviors — verification, backtracking, subgoal
+            setting, and backward chaining — are what let LLMs self-improve under reinforcement learning.</p>
+          <p class="pub-links">
+            <a href="https://arxiv.org/pdf/2503.01307.pdf">paper</a> &middot;
+            <a href="https://github.com/kanishkg/cognitive-behaviors">code</a>
+          </p>
         </div>
+      </article>
 
-        <div class="paper-card">
-          <div class="paper-image">
-            <img src="./static/images/hyre.png" alt="understanding_rlhf" width="400" loading="lazy" decoding="async"
-              style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://arxiv.org/pdf/2412.08812">
-              <span class="papertitle">Test-Time Alignment via Hypothesis Reweighting</span>
-            </a>
-            <div class="paper-meta">
-              Yoonho Lee, Jonathan Williams, Henrik Marklund, Archit Sharma, Eric Mitchell,
-              <strong>Anikait Singh</strong>, Chelsea Finn
-              <br>
-              <em>Transactions on Machine Learning Research (TMLR) </em>, 2026
-            </div>
-            <div class="paper-links">
-              <a href="https://arxiv.org/pdf/2412.08812">paper</a>
-            </div>
-            <p>We introduce HyRe, a test-time adaptation framework that trains a single neural network
-              with multiple prediction heads—each encoding a different behavior consistent with the
-              training data—and dynamically reweights them using a small set of labeled examples from the
-              target distribution. With only five preference pairs per distribution, HyRe scales to large
-              pretrained models at roughly the cost of fine-tuning one model and outperforms prior
-              state-of-the-art 2B-parameter reward models across 18 personalization and distribution-shift
-              scenarios.</p>
-          </div>
+      <article class="pub pub-featured pub-extra">
+        <a class="pub-thumb" href="https://arxiv.org/pdf/2501.04682.pdf">
+          <img src="./static/images/metacot.png" alt="Meta chain-of-thought" loading="eager" decoding="async">
+        </a>
+        <div class="pub-body">
+          <a class="pub-title" href="https://arxiv.org/pdf/2501.04682.pdf">Towards System 2 Reasoning in LLMs: Learning
+            How to Think With Meta Chain-of-Thought</a>
+          <p class="pub-meta">Violet Xiang, Charlie Snell, Kanishk Gandhi, Alon Albalak, <strong>Anikait Singh</strong>,
+            et al.</p>
+          <p class="pub-venue">2025</p>
+          <p class="pub-takeaway">Extends chain-of-thought by explicitly modeling the latent reasoning behind each CoT,
+            via process supervision, synthetic data, and search.</p>
+          <p class="pub-links">
+            <a href="https://arxiv.org/pdf/2501.04682.pdf">paper</a> &middot;
+            <a href="https://www.synthlabs.ai/research/meta-chain-of-thought">blog</a>
+          </p>
         </div>
+      </article>
 
-        <div class="paper-card">
-          <div class="paper-image">
-            <img src="./static/images/metacot.png" alt="understanding_rlhf" width="400" loading="lazy" decoding="async"
-              style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://arxiv.org/pdf/2501.04682.pdf">
-              <span class="papertitle">Towards System 2 Reasoning in LLMs: Learning How to Think With Meta
-                Chain-of-Thought</span>
-            </a>
-            <div class="paper-meta">
-              Violet Xiang, Charlie Snell, Kanishk Gandhi, Alon Albalak, <strong>Anikait Singh</strong>,
-              Chase Blagden, Duy Phung, Rafael Rafailov, Nathan Lile, Dakota Mahan, Louis Castricato,
-              Jan-Philipp Franken, Nick Haber, Chelsea Finn
-            </div>
-            <div class="paper-links">
-              <a href="https://arxiv.org/pdf/2501.04682.pdf">paper</a> /
-              <a href="https://www.synthlabs.ai/research/meta-chain-of-thought">blog</a>
-            </div>
-            <p>We propose a novel framework, Meta Chain-of-Thought (Meta-CoT), which extends traditional
-              Chain-of-Thought (CoT) by explicitly modeling the underlying reasoning required to arrive at
-              a particular CoT. We
-              present empirical evidence from state-of-the-art models exhibiting behaviors consistent with
-              in-context search,
-              and explore methods for producing Meta-CoT via process supervision, synthetic data
-              generation, and search
-              algorithms.</p>
-          </div>
+      <article class="pub pub-featured pub-extra">
+        <a class="pub-thumb" href="https://arxiv.org/pdf/2410.02725">
+          <img src="./static/images/adaptive.png" alt="Adaptive inference-time compute" loading="eager" decoding="async">
+        </a>
+        <div class="pub-body">
+          <a class="pub-title" href="https://arxiv.org/pdf/2410.02725">Adaptive Inference-Time Compute: LLMs Can
+            Predict If They Can Do Better, Even Mid-Generation</a>
+          <p class="pub-meta">Rohin Manvi, <strong>Anikait Singh</strong>, Stefano Ermon</p>
+          <p class="pub-venue">Preprint 2024</p>
+          <p class="pub-takeaway">A generative self-evaluation scheme that lets an LLM predict mid-generation whether
+            restarting would yield a better response, cutting sampling cost.</p>
+          <p class="pub-links">
+            <a href="https://arxiv.org/pdf/2410.02725">paper</a>
+          </p>
         </div>
+      </article>
 
-        <div class="paper-card">
-          <div class="paper-image">
-            <img src="./static/images/bigmath.png" alt="understanding_rlhf" width="400" loading="lazy" decoding="async"
-              style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://arxiv.org/pdf/2502.17387.pdf">
-              <span class="papertitle">Big-Math: A Large-Scale, High-Quality Math Dataset for
-                Reinforcement Learning in Language Models</span>
-            </a>
-            <div class="paper-meta">
-              Alon Albalak, Duy Phung, Nathan Lile, Rafael Rafailov, Kanishk Gandhi, Louis Castricato,
-              <strong>Anikait Singh</strong>, Chase Blagden, Violet Xiang, Dakota Mahan, Nick Haber
-              <br>
-              <em>CoLM</em>, 2025
-            </div>
-            <div class="paper-links">
-              <a href="https://arxiv.org/pdf/2502.17387.pdf">paper</a> /
-              <a href="https://www.synthlabs.ai/research/meta-chain-of-thought">blog</a>
-              <a href="https://huggingface.co/datasets/SynthLabsAI/Big-Math-RL-Verified">dataset</a>
-            </div>
-            <p>Big-Math is a dataset of over 250,000 high-quality, verifiable math questions created for
-              reinforcement learning that bridges the gap between quality and quantity by rigorously
-              filtering existing datasets and introducing 47,000 new reformulated questions, offering
-              greater diversity and varying difficulty levels compared to commonly used alternatives like
-              GSM8k and MATH.</p>
-          </div>
+      <article class="pub pub-featured pub-extra">
+        <a class="pub-thumb" href="https://arxiv.org/pdf/2502.17387.pdf">
+          <img src="./static/images/bigmath.png" alt="Big-Math dataset" loading="eager" decoding="async">
+        </a>
+        <div class="pub-body">
+          <a class="pub-title" href="https://arxiv.org/pdf/2502.17387.pdf">Big-Math: A Large-Scale, High-Quality Math
+            Dataset for Reinforcement Learning in Language Models</a>
+          <p class="pub-meta">Alon Albalak, Duy Phung, Nathan Lile, Rafael Rafailov, Kanishk Gandhi, Louis Castricato,
+            <strong>Anikait Singh</strong>, et al.</p>
+          <p class="pub-venue">CoLM 2025</p>
+          <p class="pub-takeaway">Over 250,000 high-quality, verifiable math problems built for reinforcement learning
+            in language models.</p>
+          <p class="pub-links">
+            <a href="https://arxiv.org/pdf/2502.17387.pdf">paper</a> &middot;
+            <a href="https://huggingface.co/datasets/SynthLabsAI/Big-Math-RL-Verified">dataset</a>
+          </p>
         </div>
+      </article>
 
-        <div class="paper-card">
-          <div class="paper-image">
-            <img src="./static/images/ppd.png" alt="understanding_rlhf" width="400" loading="lazy" decoding="async"
-              style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://arxiv.org/pdf/2501.06655.pdf">
-              <span class="papertitle">Personalized Preference Fine-tuning of Diffusion Models</span>
-            </a>
-            <div class="paper-meta">
-              Meihua Dang*, <strong>Anikait Singh*</strong>, Linqi Zhou, Stefano Ermon, Jiaming Song
-              <br>
-              <em>CVPR</em>, 2025
-            </div>
-            <div class="paper-links">
-              <a href="https://arxiv.org/pdf/2501.06655.pdf">paper</a> /
-              <a href="https://github.com/Asap7772/fewshot-preference-optimization">code</a>
-            </div>
-            <p>PPD is a multi-reward optimization approach that personalizes text-to-image diffusion
-              models by extracting user preference embeddings from a few examples and incorporating them
-              via cross-attention during DPO fine-tuning, enabling effective generalization to unseen
-              users with as few as four preference examples.</p>
-          </div>
+      <h3 class="pub-group">Preference Optimization and Lifelong Learning</h3>
+
+      <article class="pub pub-featured">
+        <a class="pub-thumb" href="https://fewshot-preference-optimization.github.io/">
+          <img src="./static/images/FSPO.jpg" alt="Few-Shot Preference Optimization" loading="eager" decoding="async">
+        </a>
+        <div class="pub-body">
+          <a class="pub-title" href="https://fewshot-preference-optimization.github.io/">Few-Shot Preference
+            Optimization of Synthetic Preferences Elicits Effective Personalization to Real Users</a>
+          <p class="pub-meta"><strong>Anikait Singh*</strong>, Sheryl Hsu*, Kyle Hsu, Eric Mitchell, Tatsu Hashimoto,
+            Archit Sharma, Chelsea Finn</p>
+          <p class="pub-venue">ICLR 2026</p>
+          <p class="pub-takeaway">FSPO, a meta-learning framework that leverages in-context learning to personalize LLM
+            responses to individual users from only a few preferences.</p>
+          <p class="pub-links">
+            <a href="https://fewshot-preference-optimization.github.io/">project</a> &middot;
+            <a href="https://arxiv.org/pdf/2502.19312.pdf">paper</a> &middot;
+            <a href="https://github.com/Asap7772/fewshot-preference-optimization">code</a>
+          </p>
         </div>
+      </article>
 
-        <div class="paper-card">
-          <div class="paper-image">
-            <img src="./static/images/adaptive.png" alt="understanding_rlhf" width="400" loading="lazy" decoding="async"
-              style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://arxiv.org/pdf/2410.02725">
-              <span class="papertitle">Adaptive inference-time compute: Large Language Models can predict
-                if they can do better, even mid-generation</span>
-            </a>
-            <div class="paper-meta">
-              Rohin Manvi, <strong>Anikait Singh</strong>, Stefano Ermon
-              <br>
-              <em>Preprint</em>, 2024
-            </div>
-            <div class="paper-links">
-              <a href="https://arxiv.org/pdf/2410.02725">paper</a>
-            </div>
-            <p>This paper proposes a generative self-evaluation scheme enabling large language models
-              (LLMs) to internally predict mid-generation whether restarting would yield improved
-              responses, significantly reducing computational costs by adaptively limiting sample
-              generation. Experiments show this method achieves most of the performance gains of extensive
-              multi-sample generation (e.g., increasing Llama 3.1 8B's win rate against GPT-4 from 21% to
-              34%) with dramatically fewer samples and minimal overhead.</p>
-          </div>
+      <article class="pub pub-featured">
+        <a class="pub-thumb" href="https://understanding-rlhf.github.io/">
+          <img src="./static/images/understanding_rlhf.jpeg" alt="Preference fine-tuning of LLMs" loading="eager"
+            decoding="async">
+        </a>
+        <div class="pub-body">
+          <a class="pub-title" href="https://understanding-rlhf.github.io/">Preference Fine-Tuning of LLMs Should
+            Leverage Suboptimal, On-Policy Data</a>
+          <p class="pub-meta"><strong>Anikait Singh*</strong>, Fahim Tajwar*, Archit Sharma, Rafael Rafailov, Jeff
+            Schneider, Tengyang Xie, Stefano Ermon, Chelsea Finn, Aviral Kumar</p>
+          <p class="pub-venue">ICML 2024</p>
+          <p class="pub-takeaway">Shows that on-policy sampling and negative-gradient methods outperform offline
+            maximum-likelihood objectives for preference fine-tuning.</p>
+          <p class="pub-links">
+            <a href="https://understanding-rlhf.github.io/">project</a> &middot;
+            <a href="https://arxiv.org/pdf/2404.14367.pdf">paper</a> &middot;
+            <a href="https://github.com/Asap7772/understanding-rlhf">code</a>
+          </p>
         </div>
+      </article>
 
-        <div class="paper-card">
-          <div class="paper-image">
-            <img src="./static/images/understanding_rlhf.jpeg" alt="understanding_rlhf" width="400" loading="lazy" decoding="async"
-              style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://arxiv.org/pdf/2404.14367.pdf">
-              <span class="papertitle">Preference Fine-Tuning of LLMs Should Leverage Suboptimal,
-                On-Policy Data</span>
-            </a>
-            <div class="paper-meta">
-              <strong>Anikait Singh*</strong>, Fahim Tajwar*, Archit Sharma, Rafael Rafailov,
-              Jeff Schneider, Tengyang Xie, Stefano Ermon, Chelsea Finn, Aviral Kumar
-              <br>
-              <em>ICML</em>, 2024
-            </div>
-            <div class="paper-links">
-              <a href="https://understanding-rlhf.github.io/">project page</a> /
-              <a href="https://arxiv.org/pdf/2404.14367.pdf">paper</a> /
-              <a href="https://github.com/Asap7772/understanding-rlhf">code</a>
-            </div>
-            <p>Learning from preferences is a common paradigm for fine-tuning language models.
-              Yet, many algorithmic design decisions come into play. Our new work finds that
-              approaches employing on-policy sampling or negative gradients outperform offline,
-              maximum likelihood objectives.</p>
-          </div>
+      <article class="pub pub-featured pub-extra">
+        <a class="pub-thumb" href="https://arxiv.org/pdf/2412.08812">
+          <img src="./static/images/hyre.png" alt="Hypothesis reweighting" loading="eager" decoding="async">
+        </a>
+        <div class="pub-body">
+          <a class="pub-title" href="https://arxiv.org/pdf/2412.08812">Test-Time Alignment via Hypothesis
+            Reweighting</a>
+          <p class="pub-meta">Yoonho Lee, Jonathan Williams, Henrik Marklund, Archit Sharma, Eric Mitchell,
+            <strong>Anikait Singh</strong>, Chelsea Finn</p>
+          <p class="pub-venue">TMLR 2026</p>
+          <p class="pub-takeaway">HyRe adapts a multi-head model at test time from about five labeled examples, matching
+            state-of-the-art reward models at the cost of fine-tuning one.</p>
+          <p class="pub-links">
+            <a href="https://arxiv.org/pdf/2412.08812">paper</a>
+          </p>
         </div>
+      </article>
 
-        <div class="paper-card">
-          <div class="paper-image">
-            <img src="./static/images/d5rldomains.jpg" alt="understanding_rlhf" width="400" loading="lazy" decoding="async"
-              style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://openreview.net/pdf?id=Aj1wftldeR">
-              <span class="papertitle">D5RL: Diverse Datasets for Data-Driven Deep Reinforcement
-                Learning</span>
-            </a>
-            <div class="paper-meta">
-              Rafael Rafailov*, Kyle Beltran Hatch*, <strong>Anikait Singh</strong>, Aviral Kumar,
-              Laura Smith, Ilya Kostrikov, Philippe Estruch, Victor Kolev,
-              Philip J. Ball, Jiajun Wu, Sergey Levine, Chelsea Finn
-              <br>
-              <em>RLC</em>, 2024
-            </div>
-            <div class="paper-links">
-              <a href="https://sites.google.com/view/d5rl/">project page</a> /
-              <a href="https://openreview.net/pdf?id=Aj1wftldeR">paper</a> /
-              <a href="https://github.com/d5rlbenchmark/d5rl">code</a>
-            </div>
-            <p>Offline RL algorithms enable data-driven methods without the need for
-              costly or dangerous real-world exploration, leveraging large pre-collected datasets.
-              However, effective and challenging benchmarks that capture real-world task properties are
-              necessary for evaluating progress, prompting the proposal of a new benchmark for offline RL
-              based on realistic robotic simulations and diverse data sources to
-              support both offline RL and online fine-tuning evaluation.</p>
-          </div>
+      <article class="pub pub-featured pub-extra">
+        <a class="pub-thumb" href="https://arxiv.org/pdf/2501.06655.pdf">
+          <img src="./static/images/ppd.png" alt="Personalized preference fine-tuning of diffusion models"
+            loading="eager" decoding="async">
+        </a>
+        <div class="pub-body">
+          <a class="pub-title" href="https://arxiv.org/pdf/2501.06655.pdf">Personalized Preference Fine-tuning of
+            Diffusion Models</a>
+          <p class="pub-meta">Meihua Dang*, <strong>Anikait Singh*</strong>, Linqi Zhou, Stefano Ermon, Jiaming Song</p>
+          <p class="pub-venue">CVPR 2025</p>
+          <p class="pub-takeaway">Personalizes text-to-image diffusion models from a few examples via user preference
+            embeddings and cross-attention during DPO fine-tuning.</p>
+          <p class="pub-links">
+            <a href="https://arxiv.org/pdf/2501.06655.pdf">paper</a>
+          </p>
         </div>
+      </article>
 
-        <div class="paper-card">
-          <div class="paper-image">
-          <img src="./static/images/VPTR.png" alt="workflow" width="400" loading="lazy" decoding="async" style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://arxiv.org/pdf/2309.13041.pdf">
-              <span class="papertitle"> Robotic Offline RL from Internet Videos via Value-Function
-                Pre-Training</span>
-            </a>
-            <div class="paper-meta">
-              Chethan Bhateja*, Derek Guo*, Dibya Ghosh*, <strong>Anikait Singh</strong>, Manan Tomar,
-              Quan Vuong, Yevgen Chebotar, Sergey Levine, Aviral Kumar
-              <br>
-              <em>ICRA</em>, 2024
-            </div>
-            <div class="paper-links">
-              <a href="https://arxiv.org/pdf/2309.13041.pdf">paper</a> /
-              <a href="https://dibyaghosh.com/vptr/">project page</a> /
-              <a href="https://dibyaghosh.com/vptr/results.html">videos</a>
-            </div>
-            <p>
-              VPTR is a framework that combines the benefits of pre-training on video data with robotic
-              offline RL approaches
-              that train on diverse robot data, resulting in value functions and policies for manipulation
-              tasks that are robust
-              and generalizable.
-            </p>
-          </div>
+      <h3 class="pub-group">Robotics and Deep Reinforcement Learning</h3>
+
+      <article class="pub pub-featured">
+        <a class="pub-thumb" href="https://arxiv.org/pdf/2210.05178.pdf">
+          <img src="./static/images/PTR.png" alt="Pre-training for robots" loading="eager" decoding="async">
+        </a>
+        <div class="pub-body">
+          <a class="pub-title" href="https://arxiv.org/pdf/2210.05178.pdf">Pre-Training for Robots: Offline RL Enables
+            Learning from a Handful of Trials</a>
+          <p class="pub-meta">Aviral Kumar*, <strong>Anikait Singh*</strong>, Frederik Ebert*, Mitsuhiko Nakamoto,
+            Yanlai Yang, Chelsea Finn, Sergey Levine</p>
+          <p class="pub-venue">RSS 2023</p>
+          <p class="pub-takeaway">Combines offline-RL pre-training on diverse robot data with rapid fine-tuning, learning
+            new tasks from as few as 10 demonstrations.</p>
+          <p class="pub-links">
+            <a href="https://arxiv.org/pdf/2210.05178.pdf">paper</a> &middot;
+            <a href="https://sites.google.com/view/ptr-final/">project</a>
+          </p>
         </div>
+      </article>
 
-        <div class="paper-card">
-          <div class="paper-image">
-          <img src="./static/images/RTX.png" alt="workflow" width="400" loading="lazy" decoding="async" style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://arxiv.org/pdf/2310.08864.pdf">
-              <span class="papertitle"> Open X-Embodiment: Robotic Learning Datasets and RT-X
-                Models</span>
-            </a>
-            <div class="paper-meta">
-              Open X-Embodiment Collaboration
-              <br>
-              <em>CoRL</em>, 2024
-            </div>
-            <div class="paper-links">
-              <a href="https://robotics-transformer-x.github.io/">project page</a> /
-              <a href="https://arxiv.org/pdf/2310.08864.pdf">paper</a> /
-              <a
-                href="https://deepmind.google/discover/blog/scaling-up-learning-across-many-different-robot-types/">blog</a>
-            </div>
-            <p>
-              This is an opensource dataset comprised of a large collection of robot embodiments. We study
-              how vision-language
-              models trained on X-Embodiment Datasets can enable efficient adaptation to new robots,
-              tasks, and environments.
-            </p>
-          </div>
+      <article class="pub pub-featured">
+        <a class="pub-thumb" href="https://nakamotoo.github.io/Cal-QL/index.html">
+          <img src="./static/images/CALQL.jpeg" alt="Cal-QL calibrated offline RL" loading="eager" decoding="async">
+        </a>
+        <div class="pub-body">
+          <a class="pub-title" href="https://nakamotoo.github.io/Cal-QL/index.html">Cal-QL: Calibrated Offline RL
+            Pre-Training for Efficient Online Fine-Tuning</a>
+          <p class="pub-meta">Mitsuhiko Nakamoto*, Yuexiang Zhai*, <strong>Anikait Singh</strong>, Max Sobol Mark, Yi
+            Ma, Chelsea Finn, Aviral Kumar, Sergey Levine</p>
+          <p class="pub-venue">NeurIPS 2023</p>
+          <p class="pub-takeaway">A calibrated, conservative value initialization that enables fast and stable
+            offline-to-online fine-tuning.</p>
+          <p class="pub-links">
+            <a href="https://nakamotoo.github.io/Cal-QL/index.html">project</a> &middot;
+            <a href="https://arxiv.org/abs/2303.05479">paper</a> &middot;
+            <a href="https://youtu.be/r9CCdLeMJTg">video</a> &middot;
+            <a href="https://github.com/nakamotoo/Cal-QL">code</a>
+          </p>
         </div>
+      </article>
 
-        <div class="paper-card">
-          <div class="paper-image">
-          <img src="./static/images/RT2.png" alt="workflow" width="400" loading="lazy" decoding="async" style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://robotics-transformer2.github.io/assets/rt2.pdf">
-              <span class="papertitle"> RT-2: Vision-Language-Action Models Transfer Web Knowledge to
-                Robotic Control</span>
-            </a>
-            <div class="paper-meta">
-              Google DeepMind Robotics
-              <br>
-              <em>ICRA</em>, 2023
-            </div>
-            <div class="paper-links">
-              <a href="https://robotics-transformer2.github.io/">project page</a> /
-              <a href="https://robotics-transformer2.github.io/assets/rt2.pdf">paper</a> /
-              <a
-                href="https://deepmind.google/discover/blog/rt-2-new-model-translates-vision-and-language-into-action/">blog</a>
-            </div>
-            <p>
-              We study how vision-language models trained on Internet-scale data can be incorporated
-              directly into
-              end-to-end robotic control to boost generalization and enable emergent semantic reasoning.
-            </p>
-          </div>
+      <article class="pub pub-featured pub-extra">
+        <a class="pub-thumb" href="https://arxiv.org/pdf/2211.01052.pdf">
+          <img src="./static/images/ReDS.png" alt="Offline RL with realistic datasets" loading="eager" decoding="async">
+        </a>
+        <div class="pub-body">
+          <a class="pub-title" href="https://arxiv.org/pdf/2211.01052.pdf">Offline RL With Realistic Datasets:
+            Heteroskedasticity and Support Constraints</a>
+          <p class="pub-meta"><strong>Anikait Singh*</strong>, Aviral Kumar*, Quan Vuong, Yevgen Chebotar, Sergey
+            Levine</p>
+          <p class="pub-venue">NeurIPS 2023</p>
+          <p class="pub-takeaway">Reworks the CQL distribution constraint into an approximate support constraint,
+            enabling offline RL on realistic, heteroskedastic data.</p>
+          <p class="pub-links">
+            <a href="https://arxiv.org/pdf/2211.01052.pdf">paper</a>
+          </p>
         </div>
+      </article>
 
-        <div class="paper-card">
-          <div class="paper-image">
-          <img src="./static/images/ReDS.png" alt="workflow" width="400" loading="lazy" decoding="async" style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://arxiv.org/pdf/2211.01052.pdf">
-              <span class="papertitle">Offline RL With Realistic Datasets: Heteroskedasticity and Support
-                Constraints</span>
-            </a>
-            <div class="paper-meta">
-              <strong>Anikait Singh*</strong>, Aviral Kumar*, Quan Vuong, Yevgen Chebotar, Sergey Levine
-              <br>
-              <em>NeurIPS</em>, 2023
-            </div>
-            <div class="paper-links">
-              <a href="https://arxiv.org/pdf/2211.01052.pdf">paper</a> /
-              <a
-                href="https://recorder-v3.slideslive.com/#/share?share=88978&amp;s=bedd4cb9-6463-416b-91bf-80d276f07bf3">talk</a>
-            </div>
-            <p>
-              CQL (ReDS) is an offline RL method that modifies a typical distribution constraint into an
-              approximate
-              support-level constraint via re-weighting to enable efficient learning from heteroskedastic
-              dataset compositions.
-            </p>
-          </div>
-        </div>
+      <button type="button" class="pub-toggle" data-pub-toggle aria-expanded="false">Show more publications</button>
 
-        <div class="paper-card">
-          <div class="paper-image">
-          <img src="./static/images/CALQL.jpeg" alt="workflow" width="400" loading="lazy" decoding="async" style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://arxiv.org/pdf/2204.05618.pdf">
-              <span class="papertitle"> Cal-QL: Calibrated Offline RL Pre-Training for Efficient Online
-                Fine-Tuning</span>
-            </a>
-            <div class="paper-meta">
-              Mitsuhiko Nakamoto*, Yuexiang Zhai*, <strong>Anikait Singh</strong>, Max Sobol Mark, Yi Ma,
-              Chelsea Finn, Aviral Kumar, Sergey Levine
-              <br>
-              <em>NeurIPS</em>, 2023
-            </div>
-            <div class="paper-links">
-              <a href="https://nakamotoo.github.io/Cal-QL/index.html">project page</a> /
-              <a href="https://arxiv.org/pdf/2204.05618.pdf">paper</a> /
-              <a href="https://youtu.be/r9CCdLeMJTg">video</a> /
-              <a href="https://github.com/nakamotoo/Cal-QL">code</a>
-            </div>
-            <p>
-              A method that learns a conservative value function initialization that underestimates the
-              value of the
-              learned policy from offline data, while also being calibrated, in the sense that the learned
-              Q-values
-              are at a reasonable scale. This leads to effective online fine-tuning, enabling benefits of
-              offline
-              initializations in online fine-tuning
-            </p>
-          </div>
-        </div>
-
-        <div class="paper-card">
-          <div class="paper-image">
-          <img src="./static/images/PTR.png" alt="workflow" width="400" loading="lazy" decoding="async" style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://arxiv.org/pdf/2210.05178.pdf">
-              <span class="papertitle"> Pre-Training for Robots: Offline RL Enables Learning from a
-                Handful of Trials</span>
-            </a>
-            <div class="paper-meta">
-              Aviral Kumar*, <strong>Anikait Singh</strong>*, Frederik Ebert*, Mitsuhiko Nakamoto, Yanlai
-              Yang, Chelsea Finn, Sergey Levine
-              <br>
-              <em>RSS</em>, 2023
-            </div>
-            <div class="paper-links">
-              <a href="https://sites.google.com/view/ptr-final/">project page</a> /
-              <a href="https://arxiv.org/pdf/2210.05178.pdf">paper</a> /
-              <a href="https://www.youtubeeducation.com/watch?v=yAWgyLJD5lY">video</a>
-            </div>
-            <p>
-              PTR is a framework based on offline RL that attempts to effectively learn new tasks by
-              combining
-              pre-training on existing robotic datasets with rapid fine-tuning on a new task, with as few
-              as
-              10 demonstrations.
-            </p>
-          </div>
-        </div>
-
-        <div class="paper-card">
-          <div class="paper-image">
-            <img src="./static/images/offlinerlvsbc.png" alt="workflow" width="400" loading="lazy" decoding="async"
-              style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://arxiv.org/pdf/2204.05618.pdf">
-              <span class="papertitle"> When Should We Prefer Offline Reinforcement Learning Over
-                Behavioral Cloning?</span>
-            </a>
-            <div class="paper-meta">
-              Aviral Kumar, Joey Hong, <strong>Anikait Singh</strong>, Sergey Levine
-              <br>
-              <em>ICLR</em>, 2022
-            </div>
-            <div class="paper-links">
-              <a href="https://bair.berkeley.edu/blog/2022/04/25/rl-or-bc/">project page</a> /
-              <a href="https://arxiv.org/pdf/2204.05618.pdf">paper</a>
-            </div>
-            <p>
-              Theoretical paper that characterize the properties of environments that allow offline RL
-              methods to
-              perform better than BC methods, even when only provided with expert data. Additionally,
-              policies trained
-              on sufficiently noisy suboptimal data outperform BC algorithms with expert data, especially
-              on long-horizon problems.
-            </p>
-          </div>
-        </div>
-
-        <div class="paper-card">
-          <div class="paper-image">
-          <img src="./static/images/workflow.png" alt="workflow" width="400" loading="lazy" decoding="async" style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://arxiv.org/pdf/2109.10813.pdf">
-              <span class="papertitle">A Workflow for Offline Model-Free Robotic Reinforcement
-                Learning</span>
-            </a>
-            <div class="paper-meta">
-              Aviral Kumar*, <strong>Anikait Singh*</strong>, Stephen Tian, Chelsea Finn, Sergey Levine
-              <br>
-              <em>CoRL</em>, 2021, <strong>(Oral Presentation)</strong>
-            </div>
-            <div class="paper-links">
-              <a href="https://sites.google.com/view/offline-rl-workflow">project page</a> /
-              <a href="https://arxiv.org/pdf/2109.10813.pdf">paper</a> /
-              <a
-                href="https://www.youtube.com/watch?v=h9R5LJX9b1I&amp;list=PL2oxSfYMr6hXwFk4_rBL1xgASdp-aOkV9&amp;index=4">talk</a>
-            </div>
-            <p>
-              Our proposed workflow aims to detect overfitting and underfitting in model-free offline RL,
-              and provides guidelines for addressing these issues via policy selection, regularization,
-              and architecture design.
-            </p>
-          </div>
-        </div>
-
-        <!-- <div class="paper-card">
-          <div class="paper-image">
-            <img src="./static/images/schepen.png" alt="workflow" width="400" style="border-style: none">
-          </div>
-          <div class="paper-content">
-            <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8818288"
-              >
-              <span class="papertitle"> A Mobile Application for Keyword Search in Real-World
-                Scenes</span>
-            </a>
-            <div class="paper-meta">
-              Shrinivas Pundlik, <strong>Anikait Singh</strong>, Gautam Baghel, Vilte Baliutaviciute, Gang
-              Luo
-              <br>
-              IEEE Journal of Translational Engineering in Health and Medicine, 2019
-            </div>
-            <div class="paper-links">
-              <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8818288">paper</a> /
-              <a
-                href="https://play.google.com/store/apps/details?id=edu.harvard.meei.supervisionsearch&amp;hl=en_US">app</a>
-            </div>
-            <p>
-              System to help visually-impaired patients localize where words are present in a cluttered
-              environment. This system
-              utilizes OCR + Levenshtein Distance along with specialized audio cues and additional
-              assistive features to enable
-              efficient and intuitive search in crowded, diverse environments.
-            </p>
-          </div>
-        </div> -->
-      </div>
+      <p class="scholar-link"><a href="https://scholar.google.com/citations?user=lPaISmIAAAAJ&amp;hl=en">Full list on
+          Google Scholar &rarr;</a></p>
     </section>
 
-    <section class="card section-block" id="teaching">
-      <div class="section-heading">
-        <p class="section-label">Teaching</p>
-        <!-- <h2>Courses and programs I’ve helped lead.</h2> -->
-      </div>
-      <div class="teaching-content">
-        <div class="teaching-item">
-          <img src="./static/images/stanford_logo.png" width="400" alt="Stanford teaching" loading="lazy" decoding="async">
-          <div class="teaching-details">
-            <p>Graduate Student Instructor, <a href="https://cs224r.stanford.edu/">CS224r Spring 2025/Spring 2026</a></p>
-            <p>Program Coordinator, Mentor, <a href="https://deeplearningportal.org/">Deep Learning Portal 2024</a></p>
-          </div>
-        </div>
-        <div class="teaching-item">
-          <img src="./static/images/teaching.png" width="400" alt="Berkeley teaching" loading="lazy" decoding="async">
-          <div class="teaching-details">
-            <p>Undergraduate Student Instructor, <a href="https://rail.eecs.berkeley.edu/deeprlcourse-fa22/">CS285
-                Fall 2022/Fall 2021</a></p>
-            <p>Undergraduate Student Instructor, <a href="https://inst.eecs.berkeley.edu/~cs188/sp22/">CS188 Spring
-                2022</a></p>
-          </div>
-        </div>
-      </div>
+    <section class="teaching">
+      <h2>Teaching</h2>
+      <ul class="plain">
+        <li>Graduate Student Instructor &mdash; <a href="https://cs224r.stanford.edu/">CS224r</a>, Stanford (Spring
+          2025, Spring 2026)</li>
+        <li>Program Coordinator &amp; Mentor &mdash; <a href="https://deeplearningportal.org/">Deep Learning Portal</a>
+          (2024)</li>
+        <li>Undergraduate Student Instructor &mdash; <a href="https://rail.eecs.berkeley.edu/deeprlcourse-fa22/">CS285</a>,
+          UC Berkeley (Fall 2021, Fall 2022)</li>
+        <li>Undergraduate Student Instructor &mdash; <a href="https://inst.eecs.berkeley.edu/~cs188/sp22/">CS188</a>, UC
+          Berkeley (Spring 2022)</li>
+      </ul>
     </section>
+
+    <footer>
+      <p>&copy; Anikait Singh 2026 &middot; <a href="mailto:anikait@stanford.edu">anikait@stanford.edu</a></p>
+    </footer>
   </main>
 
   <script>
@@ -760,12 +398,25 @@
 
       if (toggle) {
         toggle.addEventListener('click', function () {
-          var nextTheme = currentTheme() === 'dark' ? 'light' : 'dark';
-          applyTheme(nextTheme, true);
+          applyTheme(currentTheme() === 'dark' ? 'light' : 'dark', true);
         });
       }
 
       applyTheme(currentTheme(), false);
+    })();
+
+    (function () {
+      var pubs = document.querySelector('.publications');
+      var toggle = pubs && pubs.querySelector('[data-pub-toggle]');
+      if (!pubs || !toggle) {
+        return;
+      }
+      pubs.classList.add('has-js');
+      toggle.addEventListener('click', function () {
+        var open = pubs.classList.toggle('show-more');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.textContent = open ? 'Show fewer publications' : 'Show more publications';
+      });
     })();
   </script>
 </body>
