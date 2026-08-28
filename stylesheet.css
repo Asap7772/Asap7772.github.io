@@ -5,10 +5,13 @@
   --heading: #0d0d0d;
   --muted: #6b6a66;
   --line: rgba(13, 13, 13, 0.10);
-  --line-strong: rgba(13, 13, 13, 0.20);
   --thumb-bg: #ffffff;
-  --underline: rgba(13, 13, 13, 0.28);
-  --hover-fill: rgba(13, 13, 13, 0.04);
+  --accent: #8c1515;
+  --accent-strong: #65120f;
+  --accent-soft: rgba(140, 21, 21, 0.08);
+  --accent-line: rgba(140, 21, 21, 0.28);
+  --accent-alt: #006b63;
+  --accent-alt-soft: rgba(0, 107, 99, 0.10);
   --radius: 20px;
   --radius-sm: 12px;
   --transition: 0.18s ease;
@@ -21,10 +24,13 @@ html[data-theme="dark"] {
   --heading: #f6f4f0;
   --muted: #a3a29c;
   --line: rgba(255, 255, 255, 0.13);
-  --line-strong: rgba(255, 255, 255, 0.26);
   --thumb-bg: #171717;
-  --underline: rgba(255, 255, 255, 0.32);
-  --hover-fill: rgba(255, 255, 255, 0.06);
+  --accent: #ff8f82;
+  --accent-strong: #ffb2a8;
+  --accent-soft: rgba(255, 143, 130, 0.11);
+  --accent-line: rgba(255, 143, 130, 0.38);
+  --accent-alt: #6fd1c2;
+  --accent-alt-soft: rgba(111, 209, 194, 0.11);
 }
 
 html {
@@ -71,17 +77,13 @@ a {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--text);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
   border-radius: 4px;
 }
 
 ::selection {
-  background: rgba(13, 13, 13, 0.12);
-}
-
-html[data-theme="dark"] ::selection {
-  background: rgba(255, 255, 255, 0.18);
+  background: var(--accent-soft);
 }
 
 main {
@@ -92,6 +94,7 @@ main {
 
 /* Headings */
 h1 {
+  display: inline-block;
   margin: 0;
   font-size: clamp(2.5rem, 6.5vw, 3.5rem);
   font-weight: 600;
@@ -100,13 +103,35 @@ h1 {
   color: var(--heading);
 }
 
+h1::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3px;
+  margin-top: 0.65rem;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
 h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
   margin: 0;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--muted);
+}
+
+h2::before {
+  content: "";
+  flex: none;
+  width: 0.9rem;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--section-accent, var(--accent));
 }
 
 h3 {
@@ -141,12 +166,18 @@ h3 {
 
 .links a {
   font-weight: 500;
+  transition: color var(--transition);
+}
+
+.links a:first-child {
+  color: var(--accent);
 }
 
 .links a:hover {
+  color: var(--accent-strong);
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-color: var(--underline);
+  text-decoration-color: var(--accent-line);
 }
 
 .intro-photo {
@@ -158,7 +189,7 @@ h3 {
   height: 132px;
   object-fit: cover;
   border-radius: var(--radius);
-  border: 1px solid var(--line);
+  border: 1px solid var(--accent-line);
 }
 
 /* Bio */
@@ -171,12 +202,14 @@ h3 {
 }
 
 .bio a {
+  color: var(--accent);
   text-decoration: underline;
-  text-decoration-color: var(--underline);
+  text-decoration-color: var(--accent-line);
   text-underline-offset: 3px;
 }
 
 .bio a:hover {
+  color: var(--accent-strong);
   text-decoration-color: currentColor;
 }
 
@@ -196,6 +229,8 @@ footer {
 
 .pub-group {
   margin-top: 2.85rem;
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--accent-alt);
 }
 
 .pub-group + .pub-featured {
@@ -223,7 +258,7 @@ footer {
 }
 
 .pub-thumb:hover {
-  border-color: var(--line-strong);
+  border-color: var(--accent-line);
 }
 
 .pub-thumb img {
@@ -239,10 +274,11 @@ footer {
   font-size: 1.05rem;
   line-height: 1.35;
   letter-spacing: -0.01em;
+  transition: color var(--transition);
 }
 
 .pub-title:hover {
-  color: var(--muted);
+  color: var(--accent);
 }
 
 .pub-meta {
@@ -260,7 +296,8 @@ footer {
 .pub-venue {
   margin-top: 0.25rem;
   font-size: 0.88rem;
-  color: var(--muted);
+  font-weight: 500;
+  color: var(--accent-alt);
 }
 
 .pub-takeaway {
@@ -277,11 +314,12 @@ footer {
 }
 
 .pub-links a {
-  color: var(--muted);
+  color: var(--accent);
+  font-weight: 500;
 }
 
 .pub-links a:hover {
-  color: var(--text);
+  color: var(--accent-strong);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -297,6 +335,10 @@ footer {
   text-underline-offset: 3px;
 }
 
+.scholar-link a {
+  color: var(--accent);
+}
+
 /* Show-more toggle (progressive enhancement: no-JS shows everything) */
 .pub-toggle {
   display: none;
@@ -305,17 +347,18 @@ footer {
   font: inherit;
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--text);
-  background: transparent;
-  border: 1px solid var(--line-strong);
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
   border-radius: 999px;
   cursor: pointer;
-  transition: background-color var(--transition), border-color var(--transition);
+  transition: color var(--transition), background-color var(--transition), border-color var(--transition);
 }
 
 .pub-toggle:hover {
-  background: var(--hover-fill);
-  border-color: var(--text);
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  border-color: var(--accent);
 }
 
 .publications.has-js .pub-toggle {
@@ -331,6 +374,10 @@ footer {
 }
 
 /* Teaching */
+.teaching {
+  --section-accent: var(--accent-alt);
+}
+
 .plain {
   list-style: none;
   margin: 1.5rem 0 0;
@@ -338,14 +385,27 @@ footer {
 }
 
 .plain li {
+  position: relative;
   margin-top: 0.7rem;
+  padding-left: 1rem;
   font-size: 0.97rem;
   line-height: 1.5;
 }
 
+.plain li::before {
+  content: "";
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 0.45rem;
+  height: 2px;
+  background: var(--accent-alt);
+}
+
 .teaching a {
+  color: var(--accent-alt);
   text-decoration: underline;
-  text-decoration-color: var(--underline);
+  text-decoration-color: var(--accent-alt-soft);
   text-underline-offset: 3px;
 }
 
@@ -364,6 +424,10 @@ footer a:hover {
   text-underline-offset: 3px;
 }
 
+footer a {
+  color: var(--accent);
+}
+
 /* Theme toggle */
 .theme-toggle {
   position: fixed;
@@ -379,14 +443,14 @@ footer a:hover {
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--bg);
-  color: var(--text);
+  color: var(--accent);
   cursor: pointer;
   transition: background-color var(--transition), border-color var(--transition);
 }
 
 .theme-toggle:hover {
-  border-color: var(--text);
-  background: var(--hover-fill);
+  border-color: var(--accent-line);
+  background: var(--accent-soft);
 }
 
 .theme-toggle-icon {
