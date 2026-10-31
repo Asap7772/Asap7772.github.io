@@ -9,8 +9,7 @@
     content="Anikait Singh is a Ph.D. student at Stanford AI developing efficient adaptation algorithms for open-ended discovery.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="canonical" href="https://asap7772.github.io/">
-  <meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0d0d0d" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#faf9f7">
   <link rel="icon"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%238c1515'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial,sans-serif' font-size='30' font-weight='700' fill='%23fff' text-anchor='middle'%3EAS%3C/text%3E%3C/svg%3E">
 
@@ -42,14 +41,6 @@
       ]
     }
   </script>
-  <script>
-    (function () {
-      var storedTheme = null;
-      try { storedTheme = localStorage.getItem('theme'); } catch (e) { }
-      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      document.documentElement.setAttribute('data-theme', storedTheme || (prefersDark ? 'dark' : 'light'));
-    })();
-  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
@@ -57,21 +48,6 @@
 </head>
 
 <body>
-  <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false">
-    <span class="theme-toggle-icon" aria-hidden="true">
-      <svg class="icon-sun" viewBox="0 0 24 24" role="presentation" focusable="false">
-        <circle cx="12" cy="12" r="5" />
-        <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
-          <path d="M12 1.5v2M12 20.5v2M1.5 12h2M20.5 12h2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M4.6 19.4L6 18M18 6l1.4-1.4" />
-        </g>
-      </svg>
-      <svg class="icon-moon" viewBox="0 0 512 512" role="presentation" focusable="false">
-        <path
-          d="M279.135 512c78.756 0 150.982-35.804 198.844-94.775 28.27-34.831-2.558-85.722-46.249-77.401-82.348 15.683-158.272-47.268-158.272-130.792 0-48.424 26.06-92.292 67.434-115.836 38.745-22.05 28.999-80.788-15.022-88.919A257.936 257.936 0 0 0 279.135 0c-141.36 0-256 114.575-256 256 0 141.36 114.576 256 256 256z" />
-      </svg>
-    </span>
-  </button>
-
   <main>
     <header class="intro">
       <div class="intro-text">
@@ -444,35 +420,6 @@
   </main>
 
   <script>
-    (function () {
-      var root = document.documentElement;
-      var toggle = document.querySelector('[data-theme-toggle]');
-
-      function currentTheme() {
-        return root.getAttribute('data-theme') || 'light';
-      }
-
-      function applyTheme(theme, persist) {
-        root.setAttribute('data-theme', theme);
-        if (persist) {
-          try { localStorage.setItem('theme', theme); } catch (e) { }
-        }
-        if (toggle) {
-          var isDark = theme === 'dark';
-          toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
-          toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-        }
-      }
-
-      if (toggle) {
-        toggle.addEventListener('click', function () {
-          applyTheme(currentTheme() === 'dark' ? 'light' : 'dark', true);
-        });
-      }
-
-      applyTheme(currentTheme(), false);
-    })();
-
     (function () {
       var pubs = document.querySelector('.publications');
       var toggle = pubs && pubs.querySelector('[data-pub-toggle]');

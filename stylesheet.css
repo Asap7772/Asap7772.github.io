@@ -15,28 +15,10 @@
   --transition: 0.18s ease;
 }
 
-html[data-theme="dark"] {
-  --bg: #0d0d0d;
-  --surface: #161616;
-  --text: #ececec;
-  --heading: #f6f4f0;
-  --muted: #a3a29c;
-  --line: rgba(255, 255, 255, 0.13);
-  --thumb-bg: #171717;
-  --accent: #ff8f82;
-  --accent-strong: #ffb2a8;
-  --accent-soft: rgba(255, 143, 130, 0.11);
-  --accent-line: rgba(255, 143, 130, 0.38);
-}
-
 html {
   color-scheme: light;
   scroll-behavior: smooth;
   background: var(--bg);
-}
-
-html[data-theme="dark"] {
-  color-scheme: dark;
 }
 
 *,
@@ -385,55 +367,6 @@ footer a {
   color: var(--accent);
 }
 
-/* Theme toggle */
-.theme-toggle {
-  position: fixed;
-  top: 1.15rem;
-  right: 1.15rem;
-  z-index: 10;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.6rem;
-  height: 2.6rem;
-  padding: 0;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--bg);
-  color: var(--accent);
-  cursor: pointer;
-  transition: background-color var(--transition), border-color var(--transition);
-}
-
-.theme-toggle:hover {
-  border-color: var(--accent-line);
-  background: var(--accent-soft);
-}
-
-.theme-toggle-icon {
-  display: inline-flex;
-  width: 1.05rem;
-  height: 1.05rem;
-}
-
-.theme-toggle svg {
-  width: 100%;
-  height: 100%;
-  fill: currentColor;
-}
-
-.theme-toggle .icon-sun {
-  display: none;
-}
-
-html[data-theme="dark"] .theme-toggle .icon-sun {
-  display: block;
-}
-
-html[data-theme="dark"] .theme-toggle .icon-moon {
-  display: none;
-}
-
 /* Responsive */
 @media (max-width: 620px) {
   body {
@@ -465,12 +398,6 @@ html[data-theme="dark"] .theme-toggle .icon-moon {
     width: 100%;
     height: 170px;
     padding: 0.75rem;
-  }
-
-  .theme-toggle {
-    position: absolute;
-    top: 0.75rem;
-    right: 0.75rem;
   }
 }
 
