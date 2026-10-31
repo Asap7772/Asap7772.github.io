@@ -6,12 +6,48 @@
   <title>Anikait Singh</title>
   <meta name="author" content="Anikait Singh">
   <meta name="description"
-    content="Anikait Singh is a Ph.D. student at Stanford AI building algorithms for self-improving and creative foundation models.">
+    content="Anikait Singh is a Ph.D. student at Stanford AI developing efficient adaptation algorithms for open-ended discovery.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://asap7772.github.io/">
+  <meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d0d0d" media="(prefers-color-scheme: dark)">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%238c1515'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial,sans-serif' font-size='30' font-weight='700' fill='%23fff' text-anchor='middle'%3EAS%3C/text%3E%3C/svg%3E">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://asap7772.github.io/">
+  <meta property="og:title" content="Anikait Singh">
+  <meta property="og:description"
+    content="Anikait Singh is a Ph.D. student at Stanford AI developing efficient adaptation algorithms for open-ended discovery.">
+  <meta property="og:image" content="https://asap7772.github.io/static/images/profile.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@Anikait_Singh_">
+  <meta name="twitter:creator" content="@Anikait_Singh_">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Anikait Singh",
+      "url": "https://asap7772.github.io/",
+      "image": "https://asap7772.github.io/static/images/profile.jpg",
+      "jobTitle": "Ph.D. Student",
+      "affiliation": { "@type": "CollegeOrUniversity", "name": "Stanford University" },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of California, Berkeley" },
+      "email": "mailto:anikait@stanford.edu",
+      "sameAs": [
+        "https://scholar.google.com/citations?user=lPaISmIAAAAJ",
+        "https://github.com/asap7772",
+        "https://twitter.com/Anikait_Singh_"
+      ]
+    }
+  </script>
   <script>
     (function () {
-      var storedTheme = localStorage.getItem('theme');
-      document.documentElement.setAttribute('data-theme', storedTheme || 'light');
+      var storedTheme = null;
+      try { storedTheme = localStorage.getItem('theme'); } catch (e) { }
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', storedTheme || (prefersDark ? 'dark' : 'light'));
     })();
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +59,13 @@
 <body>
   <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false">
     <span class="theme-toggle-icon" aria-hidden="true">
-      <svg viewBox="0 0 512 512" role="presentation" focusable="false">
+      <svg class="icon-sun" viewBox="0 0 24 24" role="presentation" focusable="false">
+        <circle cx="12" cy="12" r="5" />
+        <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M12 1.5v2M12 20.5v2M1.5 12h2M20.5 12h2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M4.6 19.4L6 18M18 6l1.4-1.4" />
+        </g>
+      </svg>
+      <svg class="icon-moon" viewBox="0 0 512 512" role="presentation" focusable="false">
         <path
           d="M279.135 512c78.756 0 150.982-35.804 198.844-94.775 28.27-34.831-2.558-85.722-46.249-77.401-82.348 15.683-158.272-47.268-158.272-130.792 0-48.424 26.06-92.292 67.434-115.836 38.745-22.05 28.999-80.788-15.022-88.919A257.936 257.936 0 0 0 279.135 0c-141.36 0-256 114.575-256 256 0 141.36 114.576 256 256 256z" />
       </svg>
@@ -53,21 +95,25 @@
       <p>
         I am a final-year Ph.D. student at Stanford University, advised by
         <a href="https://ai.stanford.edu/~cbfinn/">Chelsea Finn</a> and
-        <a href="https://aviralkumar2907.github.io/">Aviral Kumar</a>, and a Research Scientist Intern at Meta MSL.
+        <a href="https://aviralkumar2907.github.io/">Aviral Kumar</a>, and a Research Scientist Intern at Meta Superintelligence Labs (MSL).
         Prior to Stanford, I was at UC Berkeley, where I was advised by
         <a href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a>, and I have held internships at
         Microsoft Research NYC, Google DeepMind Robotics, and Toyota Research Institute. My research is supported by the
         NSF Graduate Research Fellowship.
       </p>
       <p>
-        My research develops algorithms for self-improving and creative foundation models, with the
-        long-term goal of enabling progress on difficult, open-ended problems such as scientific research. These
-        problems require more than imitating demonstrations or solving well-specified tasks: models must decide what is
-        worth trying, synthesize partial evidence, discover useful abstractions, and refine ideas whose value is
-        revealed only through downstream validation. I study how feedback from a model's own attempts, natural-language
-        critiques, and inference-time computation can be transformed into learning signals that drive exploration and
-        improvement. The aim is to build models that can generate, evaluate, and refine novel insights, learning
-        problem-solving strategies that generalize across domains.
+        My research develops efficient adaptation algorithms for open-ended discovery, with the long-term goal of
+        building AI systems that can make progress on problems such as scientific research. Large-scale pre-training
+        and post-training have given foundation models broad world knowledge and strong reasoning priors, yet adapting
+        to novel environments remains a bottleneck when tasks require new knowledge or behaviors. I study how AI
+        systems can adapt efficiently through interaction, developing algorithms for three complementary capabilities:
+        exploring new behaviors, incorporating new knowledge, and uncovering the underlying structure of an environment.
+        Together, these capabilities can form a flywheel for improvement in open-ended settings, where agents synthesize
+        experience and new knowledge gathered through environmental interaction to direct future&nbsp;exploration.
+      </p>
+      <p>
+        I&rsquo;m on the industry job market for 2026&ndash;27. Please reach out via
+        <a href="mailto:anikait@stanford.edu">email</a>!
       </p>
     </section>
 
@@ -106,7 +152,7 @@
             Solving Reasoning Problems</a>
           <p class="pub-meta">Yuxiao Qu*, <strong>Anikait Singh*</strong>, Yoonho Lee*, Amrith Setlur, Ruslan
             Salakhutdinov, Chelsea Finn, Aviral Kumar</p>
-          <p class="pub-venue">ICLR 2026 &middot; Spotlight, ES-FoMo Workshop @ ICML 2025</p>
+          <p class="pub-venue">ICLR 2026 &middot; ES-FoMo Workshop @ ICML 2025 <span class="pub-award">Spotlight</span></p>
           <p class="pub-takeaway">A multi-agent RL method (RLAD) that trains LLMs to discover reusable reasoning
             abstractions, steering exploration toward useful strategies on hard problems.</p>
           <p class="pub-links">
@@ -119,7 +165,7 @@
 
       <article class="pub pub-featured">
         <a class="pub-thumb" href="https://giants-insights.github.io/">
-          <img src="./static/images/giants.png" alt="GIANTS scientific insight anticipation" loading="eager"
+          <img src="./static/images/giants.png" alt="GIANTS scientific insight anticipation" loading="lazy"
             decoding="async">
         </a>
         <div class="pub-body">
@@ -127,7 +173,7 @@
             Scientific Literature</a>
           <p class="pub-meta">Joy He-Yueya*, <strong>Anikait Singh*</strong>, Ge Gao, Michael Y. Li, Sherry Yang,
             Chelsea Finn, Emma Brunskill, Noah D. Goodman</p>
-          <p class="pub-venue">Oral Presentation, LM4Sci Workshop @ CoLM 2026</p>
+          <p class="pub-venue">LM4Sci Workshop @ CoLM 2026 <span class="pub-award">Oral</span></p>
           <p class="pub-takeaway">An LM trained with RL to anticipate a paper's core insight from its foundational
             references, generalizing to unseen scientific disciplines.</p>
           <p class="pub-links">
@@ -140,7 +186,7 @@
 
       <article class="pub pub-featured">
         <a class="pub-thumb" href="https://openreview.net/pdf?id=ZXRKOAf7UX">
-          <img src="./static/images/backtrack.png" alt="Test-time search with backtracking" loading="eager"
+          <img src="./static/images/backtrack.png" alt="Test-time search with backtracking" loading="lazy"
             decoding="async">
         </a>
         <div class="pub-body">
@@ -148,7 +194,8 @@
             Backtracking Against In-Context Value Verifiers</a>
           <p class="pub-meta"><strong>Anikait Singh</strong>, Kushal Arora, Sedrick Keh, Jean Mercat, Tatsunori
             Hashimoto, Chelsea Finn, Aviral Kumar</p>
-          <p class="pub-venue">Runner-Up Best Paper, Reasoning and Planning for LLMs Workshop @ ICLR 2025</p>
+          <p class="pub-venue">Reasoning and Planning for LLMs Workshop @ ICLR 2025 <span class="pub-award">Runner-Up Best
+              Paper</span></p>
           <p class="pub-takeaway">Pairs process verifiers with preemptive backtracking to resample only problematic
             steps, cutting test-time compute.</p>
           <p class="pub-links">
@@ -160,14 +207,14 @@
       <article class="pub pub-featured">
         <a class="pub-thumb" href="https://arxiv.org/pdf/2503.01307.pdf">
           <img src="./static/images/cog_behav.png" alt="Cognitive behaviors for self-improving reasoners"
-            loading="eager" decoding="async">
+            loading="lazy" decoding="async">
         </a>
         <div class="pub-body">
           <a class="pub-title" href="https://arxiv.org/pdf/2503.01307.pdf">Cognitive Behaviors that Enable
             Self-Improving Reasoners, or, Four Habits of Highly Effective STaRs</a>
           <p class="pub-meta">Kanishk Gandhi, Ayush Chakravarthy, <strong>Anikait Singh</strong>, Nathan Lile, Noah D.
             Goodman</p>
-          <p class="pub-venue">CoLM 2025 &middot; Oral Presentation</p>
+          <p class="pub-venue">CoLM 2025 <span class="pub-award">Oral</span></p>
           <p class="pub-takeaway">Shows that intrinsic reasoning behaviors — verification, backtracking, subgoal
             setting, and backward chaining — are what let LLMs self-improve under reinforcement learning.</p>
           <p class="pub-links">
@@ -179,7 +226,7 @@
 
       <article class="pub pub-featured pub-extra">
         <a class="pub-thumb" href="https://arxiv.org/pdf/2501.04682.pdf">
-          <img src="./static/images/metacot.png" alt="Meta chain-of-thought" loading="eager" decoding="async">
+          <img src="./static/images/metacot.png" alt="Meta chain-of-thought" loading="lazy" decoding="async">
         </a>
         <div class="pub-body">
           <a class="pub-title" href="https://arxiv.org/pdf/2501.04682.pdf">Towards System 2 Reasoning in LLMs: Learning
@@ -198,7 +245,7 @@
 
       <article class="pub pub-featured pub-extra">
         <a class="pub-thumb" href="https://arxiv.org/pdf/2410.02725">
-          <img src="./static/images/adaptive.png" alt="Adaptive inference-time compute" loading="eager" decoding="async">
+          <img src="./static/images/adaptive.png" alt="Adaptive inference-time compute" loading="lazy" decoding="async">
         </a>
         <div class="pub-body">
           <a class="pub-title" href="https://arxiv.org/pdf/2410.02725">Adaptive Inference-Time Compute: LLMs Can
@@ -215,7 +262,7 @@
 
       <article class="pub pub-featured pub-extra">
         <a class="pub-thumb" href="https://arxiv.org/pdf/2502.17387.pdf">
-          <img src="./static/images/bigmath.png" alt="Big-Math dataset" loading="eager" decoding="async">
+          <img src="./static/images/bigmath.png" alt="Big-Math dataset" loading="lazy" decoding="async">
         </a>
         <div class="pub-body">
           <a class="pub-title" href="https://arxiv.org/pdf/2502.17387.pdf">Big-Math: A Large-Scale, High-Quality Math
@@ -236,7 +283,7 @@
 
       <article class="pub pub-featured">
         <a class="pub-thumb" href="https://fewshot-preference-optimization.github.io/">
-          <img src="./static/images/FSPO.jpg" alt="Few-Shot Preference Optimization" loading="eager" decoding="async">
+          <img src="./static/images/FSPO.jpg" alt="Few-Shot Preference Optimization" loading="lazy" decoding="async">
         </a>
         <div class="pub-body">
           <a class="pub-title" href="https://fewshot-preference-optimization.github.io/">Few-Shot Preference
@@ -256,7 +303,7 @@
 
       <article class="pub pub-featured">
         <a class="pub-thumb" href="https://understanding-rlhf.github.io/">
-          <img src="./static/images/understanding_rlhf.jpeg" alt="Preference fine-tuning of LLMs" loading="eager"
+          <img src="./static/images/understanding_rlhf.jpeg" alt="Preference fine-tuning of LLMs" loading="lazy"
             decoding="async">
         </a>
         <div class="pub-body">
@@ -277,7 +324,7 @@
 
       <article class="pub pub-featured pub-extra">
         <a class="pub-thumb" href="https://arxiv.org/pdf/2412.08812">
-          <img src="./static/images/hyre.png" alt="Hypothesis reweighting" loading="eager" decoding="async">
+          <img src="./static/images/hyre.png" alt="Hypothesis reweighting" loading="lazy" decoding="async">
         </a>
         <div class="pub-body">
           <a class="pub-title" href="https://arxiv.org/pdf/2412.08812">Test-Time Alignment via Hypothesis
@@ -296,7 +343,7 @@
       <article class="pub pub-featured pub-extra">
         <a class="pub-thumb" href="https://arxiv.org/pdf/2501.06655.pdf">
           <img src="./static/images/ppd.png" alt="Personalized preference fine-tuning of diffusion models"
-            loading="eager" decoding="async">
+            loading="lazy" decoding="async">
         </a>
         <div class="pub-body">
           <a class="pub-title" href="https://arxiv.org/pdf/2501.06655.pdf">Personalized Preference Fine-tuning of
@@ -315,7 +362,7 @@
 
       <article class="pub pub-featured">
         <a class="pub-thumb" href="https://arxiv.org/pdf/2210.05178.pdf">
-          <img src="./static/images/PTR.png" alt="Pre-training for robots" loading="eager" decoding="async">
+          <img src="./static/images/PTR.png" alt="Pre-training for robots" loading="lazy" decoding="async">
         </a>
         <div class="pub-body">
           <a class="pub-title" href="https://arxiv.org/pdf/2210.05178.pdf">Pre-Training for Robots: Offline RL Enables
@@ -334,7 +381,7 @@
 
       <article class="pub pub-featured">
         <a class="pub-thumb" href="https://nakamotoo.github.io/Cal-QL/index.html">
-          <img src="./static/images/CALQL.jpeg" alt="Cal-QL calibrated offline RL" loading="eager" decoding="async">
+          <img src="./static/images/CALQL.jpeg" alt="Cal-QL calibrated offline RL" loading="lazy" decoding="async">
         </a>
         <div class="pub-body">
           <a class="pub-title" href="https://nakamotoo.github.io/Cal-QL/index.html">Cal-QL: Calibrated Offline RL
@@ -355,7 +402,7 @@
 
       <article class="pub pub-featured pub-extra">
         <a class="pub-thumb" href="https://arxiv.org/pdf/2211.01052.pdf">
-          <img src="./static/images/ReDS.png" alt="Offline RL with realistic datasets" loading="eager" decoding="async">
+          <img src="./static/images/ReDS.png" alt="Offline RL with realistic datasets" loading="lazy" decoding="async">
         </a>
         <div class="pub-body">
           <a class="pub-title" href="https://arxiv.org/pdf/2211.01052.pdf">Offline RL With Realistic Datasets:
@@ -408,7 +455,7 @@
       function applyTheme(theme, persist) {
         root.setAttribute('data-theme', theme);
         if (persist) {
-          localStorage.setItem('theme', theme);
+          try { localStorage.setItem('theme', theme); } catch (e) { }
         }
         if (toggle) {
           var isDark = theme === 'dark';
